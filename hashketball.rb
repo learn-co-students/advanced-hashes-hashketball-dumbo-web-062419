@@ -240,6 +240,8 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
+  home_away = nil
+  team_level = nil
   greatest_name = ""
   shoe_size = 0
   game_hash.each do |location, team_data|
@@ -253,6 +255,7 @@ def big_shoe_rebounds
                 if int > shoe_size
                 #binding.pry
                   greatest_name = player_name
+                  
                 binding.pry
                   end
                 end
