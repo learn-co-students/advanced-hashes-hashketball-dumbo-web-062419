@@ -244,11 +244,13 @@ def big_shoe_rebounds
     team_data.each do |key, value|
       if key == :players
         value.each do |player|
-          binding.pry
+
+          #binding.pry
             greatest_key = !nil
             greatest_value = !nil
             player.each do |player_name, stats|
             if greatest_value == !nil || stats[:shoe_size] > greatest_value
+              binding.pry
               greatest_key = a
               greatest_value = b
             end
