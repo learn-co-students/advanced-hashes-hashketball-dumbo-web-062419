@@ -254,6 +254,7 @@ def big_shoe_rebounds
                 #binding.pry
                 if int > shoe_size
                 #binding.pry
+                  i = index
                   greatest_name = player_name
                   home_away = location
                   team_level = key
