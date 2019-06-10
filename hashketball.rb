@@ -250,6 +250,7 @@ def big_shoe_rebounds
               stats.each do |stat, int|
                 if int > shoe_size
                   player_name = player
+                end
             end
           end
         end
