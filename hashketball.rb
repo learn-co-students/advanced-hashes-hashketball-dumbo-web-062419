@@ -240,7 +240,13 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
-
+  game_hash.each do |location, team_data|
+    team_data.each do |key, value|
+      if key == :players
+        value.each do |player|
+          player.each do |player_name, stats|
+            if stats[:shoe_size] 
+              biggest_shoe = b
 end
 
 def most_points_scored
