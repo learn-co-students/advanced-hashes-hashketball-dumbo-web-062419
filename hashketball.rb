@@ -252,7 +252,7 @@ def big_shoe_rebounds
                 #binding.pry
                 if int > shoe_size
                 #binding.pry
-                  greatest_name = player
+                  greatest_name = player_name
                 binding.pry
                   end
                 end
