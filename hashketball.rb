@@ -267,7 +267,7 @@ def big_shoe_rebounds
       end
     end
   end
-    return game_hash[location][team_data][greatest_name][:rebounds]
+    return game_hash[home_away][team_level][greatest_name][:rebounds]
 end
 
 def most_points_scored
