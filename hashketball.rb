@@ -244,12 +244,12 @@ def big_shoe_rebounds
     team_data.each do |key, value|
       if key == :players
         value.each do |player|
-            biggest_key = !nil
-            biggest_value = !nil
+            greatest_key = !nil
+            greatest_value = !nil
             player.each do |player_name, stats|
-            if stats[:shoe_size]
-              biggest_key = a
-              biggest_value = b
+            if greatest_value == !nil || stats > greatest_value
+              greatest_key = a
+              greatest_value = b
 
 end
 
