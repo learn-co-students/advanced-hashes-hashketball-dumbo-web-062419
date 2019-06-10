@@ -267,7 +267,7 @@ def big_shoe_rebounds
       end
     end
   end
-    game_hash[home_away][:players][greatest_name][:rebounds]
+    game_hash[home_away][:players][i][greatest_name][:rebounds]
 end
 
 def most_points_scored
