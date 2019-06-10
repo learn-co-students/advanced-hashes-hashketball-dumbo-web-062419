@@ -249,9 +249,10 @@ def big_shoe_rebounds
             player.each do |player_name, stats|
               stats.each do |stat, int|
                 if stat == :rebounds
-                binding.pry
+                #binding.pry
                 if int > shoe_size
                   player_name = player
+                end
                 end
              end
           end
