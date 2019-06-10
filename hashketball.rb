@@ -224,7 +224,19 @@ end
 
 
 def player_stats(name)
-
+  game_hash.each do |location, team_data|
+     team_data.each do |key, value|
+       if key == :players
+         value.each do |player|
+           player.each do |player_name, stats|
+             if player_name == name
+               return stats
+             end
+           end
+         end
+       end
+     end
+  end
 end
 
 def big_shoe_rebounds
