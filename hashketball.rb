@@ -249,9 +249,11 @@ def big_shoe_rebounds
             player.each do |player_name, stats|
             if stats[:shoe_size]
               biggest_key = a
+              biggest_value = b
 
 end
 
 def most_points_scored
 
 end
+
