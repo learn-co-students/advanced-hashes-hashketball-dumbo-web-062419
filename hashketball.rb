@@ -253,6 +253,7 @@ def big_shoe_rebounds
                 if int > shoe_size
                 #binding.pry
                   player_name = player
+                    return game_hash[location][team_data][player_name][:rebounds]
                   end
                 end
              end
@@ -261,7 +262,7 @@ def big_shoe_rebounds
       end
     end
   end
-  return game_hash[location][team_data][player_name][:rebounds]
+
 end
 
 def most_points_scored
