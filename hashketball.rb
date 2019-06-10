@@ -240,6 +240,7 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
+  i = 0
   home_away = nil
   team_level = nil
   greatest_name = ""
