@@ -240,18 +240,16 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
+  player_name = ""
+  shoe_size = 0
   game_hash.each do |location, team_data|
     team_data.each do |key, value|
       if key == :players
         value.each do |player|
-          #binding.pry
-            greatest_key = !nil
-            greatest_value = !nil
             player.each do |player_name, stats|
-            if greatest_value == !nil || stats[:shoe_size] > greatest_value
-              #binding.pry
-              greatest_key = a
-              greatest_value = b
+              stats.each do |stat, int|
+                if int > shoe_size
+                  player_name = player
             end
           end
         end
