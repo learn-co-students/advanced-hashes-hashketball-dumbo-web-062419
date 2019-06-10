@@ -259,6 +259,7 @@ def big_shoe_rebounds
       end
     end
   end
+  return stats[:rebounds]
 end
 
 def most_points_scored
