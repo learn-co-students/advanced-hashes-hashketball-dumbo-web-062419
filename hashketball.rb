@@ -257,8 +257,6 @@ def big_shoe_rebounds
                   greatest_name = player_name
                   home_away = location
                   team_level = team_data
-
-                binding.pry
                   end
                 end
              end
