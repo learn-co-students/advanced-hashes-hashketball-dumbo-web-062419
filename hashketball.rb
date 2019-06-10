@@ -245,7 +245,7 @@ def big_shoe_rebounds
       if key == :players
         value.each do |player|
           player.each do |player_name, stats|
-            if stats[:shoe_size] 
+            if stats[:shoe_size]
               biggest_shoe = b
 end
 
