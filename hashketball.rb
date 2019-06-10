@@ -4,7 +4,7 @@ def game_hash
 game_hash = {
   :home => {
     :team_name => "Brooklyn Nets",
-    :colors => ["Black", "white"],
+    :colors => ["Black", "White"],
     :players =>
     [
       {
@@ -47,7 +47,7 @@ game_hash = {
       }
       },
       {
-        "Mason_Plumlee" =>
+        "Mason Plumlee" =>
       {
             :number => 1,
             :shoe => 19,
@@ -60,7 +60,7 @@ game_hash = {
       }
       },
       {
-          "Jason_Terry" =>
+          "Jason Terry" =>
       {
             :number => 31,
             :shoe => 15,
@@ -133,7 +133,7 @@ game_hash = {
         }
         },
         {
-          "Kemba_Walker" =>
+          "Kemba Walker" =>
         {
             :number => 33,
             :shoe => 15,
@@ -151,13 +151,86 @@ game_hash = {
 end
 
 def num_points_scored(name)
+  i = 0
   game_hash.each do |location, team_data|
-    team_data.each do |players, stats|
-     stats[:players].each do |player|
-         return players[:points] if players[:player_name] == name
-         end
-       end
-     end
-   end
+    team_data.each do |key, value|
+       if key == :players
+         value.each do |player|
+            player.each do |player_name, stats|
+               if player_name == name
+                 i = stats[:points]
+               end
+            end
+          end
+        end
+      end
+  end
+  i
+end
 
-num_points_scored("Alan Anderson")
+def shoe_size(name)
+  i = 0
+  game_hash.each do |location, team_data|
+    team_data.each do |key, value|
+       if key == :players
+         value.each do |player|
+            player.each do |player_name, stats|
+               if player_name == name
+                 i = stats[:shoe]
+               end
+            end
+          end
+        end
+      end
+   end
+  i
+end
+
+def team_colors(team)
+  game_hash.each do |location, team_data|
+      if team_data[:team_name] == team
+        return team_data[:colors]
+    end
+  end
+end
+
+def team_names
+  name_array = []
+    game_hash.each do |location, team_data|
+      name_array << team_data[:team_name]
+    end
+  name_array
+end
+
+def player_numbers(team)
+  jersey_num_array = []
+    game_hash.each do |location, team_data|
+      if team_data[:team_name] == team
+        #binding.pry
+         team_data.each do |key, value|
+          if key == :players
+           #binding.pry
+            value.each do |player|
+             player.each do |player_name, stats|
+            jersey_num_array << stats[:number]
+              end
+            end
+          end
+        end
+      end
+   end
+  jersey_num_array
+end
+
+
+def player_stats(name)
+
+end
+
+def big_shoe_rebounds
+
+end
+
+def most_points_scored
+
+end
