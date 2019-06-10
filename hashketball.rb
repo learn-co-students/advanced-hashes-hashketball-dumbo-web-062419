@@ -247,10 +247,15 @@ def big_shoe_rebounds
             greatest_key = !nil
             greatest_value = !nil
             player.each do |player_name, stats|
-            if greatest_value == !nil || stats > greatest_value
+            if greatest_value == !nil || stats[:shoe_size] > greatest_value
               greatest_key = a
               greatest_value = b
-
+            end
+          end
+        end
+      end
+    end
+  end
 end
 
 def most_points_scored
