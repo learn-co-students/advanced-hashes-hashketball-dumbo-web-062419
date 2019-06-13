@@ -189,18 +189,31 @@ def player_numbers(team_name)
   numbers
 end
 
-# def player_stats(player_name)
-#   final_hash = {}
-#   game_hash.each do |location, team_data|
-#     team_data.each do |data|
-#       binding.pry
-#       if team_data[:players] == player_name
-#
-#       end
-#     end
-#     binding.pry
-#   end
-# end
+def player_stats(player_name)
+  player_stats = {}
+  game_hash.each do |location, team_data|
+    team_data.each do |data, values|
+      team_data[:players].each do |player|
+        if player[:player_name] == player_name
+
+           player_stats[:number] = player[:number]
+           #binding.pry
+           player_stats[:shoe] = player[:shoe]
+           player_stats[:points] = player[:points]
+           player_stats[:rebounds] = player[:rebounds]
+           player_stats[:assists] = player[:assists]
+           player_stats[:steals] = player[:steals]
+           player_stats[:blocks] = player[:blocks]
+           player_stats[:slam_dunks] = player[:slam_dunks]
+
+        #binding.pry
+        end
+      end
+    end
+  end
+  player_stats
+  #binding.pry
+end
 
 
 def big_shoe_rebounds
@@ -242,25 +255,30 @@ end
 
 def winning_team
   winning_team = nil
+  winning_team = nil
   most_team_points = 0
-  team_points = 0
+  team_points = {
+                'Brooklyn Nets' => 0,
+                'Charlotte Hornets' => 0
+      }
 
   game_hash.each do |location, team_data|
-    team_data.each do |data, values|
+    team = team_data[:team_name]
+      team_data.each do |data, values|
         #binding.pry
-      team_data[:players].each do |data|
-          team_points += data[:points]
+        team_data[:players].each do |player|
+          team_points[team_data[:team_name]] += player[:points]
+
+        end
         #binding.pry
       end
-    end
-
-    if team_points > most_team_points
-      most_team_points = team_points
-      winning_team = team_data[:team_name]
-    end
+    #binding.pry
   end
 
-  winning_team
+  team_points.each do |team, points|
+    #binding.pry
+    return team if points == team_points.values.max
+  end
 end
 
 
