@@ -154,8 +154,8 @@ end
 good_practices
 
 def num_points_scored(plyer_name)
-  player_name.each do |players, points|
-    puts points
+  player_name.each do |scored, nums|
+    puts nums 
   end
   
   def shoe_size(player_name)
@@ -168,7 +168,18 @@ def num_points_scored(plyer_name)
         puts colors 
       end
       
-      def team_name()
+      def team_name
+        team_name.each do |game_hash|
+          puts game_hash
+        end 
+        
+        def players_numbers(player_name)
+          player_name.each do |player, numbers|
+            puts numbers
+          end 
+          
+          
+            
     
 
 
