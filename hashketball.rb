@@ -1,8 +1,7 @@
 require "pry"
 # Write your code here!
-def game_hash 
-  home: 
-  { 
+def game_hash {
+  home: { 
   team_name: "Brooklyn Nets",
   colors: ["Black", "White"],
   players:  [{ "Alan Anderson"
@@ -200,6 +199,8 @@ def num_points_scored(plyer_name)
           if player_shoe_size > rebounds
             return rebounds 
             binding.pry 
+          end 
+          
               
             
     
