@@ -153,6 +153,23 @@ def good_practices
 end 
 good_practices
 
+def num_points_scored(plyer_name)
+  player_name.each do |players, points|
+    puts points
+  end
+  
+  def shoe_size(player_name)
+    player_name.collect do |shoe_size, name|
+      puts name 
+    end 
+    
+    def team_colors(team_name)
+      team_name.each do |colors|
+        puts colors 
+      end
+      
+      def team_name()
+    
 
 
 
