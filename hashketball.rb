@@ -182,6 +182,24 @@ def num_points_scored(plyer_name)
             player_name.each do |player, stats|
               puts stats
             end 
+            
+        player_stats("Alan Anderson")
+          { 
+        :number => 0,
+        :shoe => 16,
+        :points => 22,
+        :rebounds => 12,
+        :assists => 12,
+        :steals => 3,
+        :blocks => 1,
+        :slam_dunks => 1
+      }
+      
+      def big_shoe_rebounds
+        shoe.each do |player|
+          if player_shoe_size > rebounds
+            return rebounds 
+            binding.pry 
               
             
     
