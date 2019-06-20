@@ -178,7 +178,11 @@ def num_points_scored(plyer_name)
             puts numbers
           end 
           
-          
+          def players_stats(player_name)
+            player_name.each do |player, stats|
+              puts stats
+            end 
+              
             
     
 
