@@ -1,5 +1,6 @@
-# Write your code here!
 require "pry"
+# Write your code here!
+
 def game_hash
   {
     home: {
@@ -187,3 +188,5 @@ player_name.collect do |shoe_size|
         return shoe_size
         binding.pry 
       end 
+    end 
+    end   
