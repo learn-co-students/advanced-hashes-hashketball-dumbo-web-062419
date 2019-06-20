@@ -112,7 +112,7 @@ def game_hash
     }
   }
 }
-    end
+      end
     end
   end
 end
@@ -148,6 +148,10 @@ def good_practices
     end
   end
 end
+
+def good_practices
+end 
+good_practices
 
 
 
