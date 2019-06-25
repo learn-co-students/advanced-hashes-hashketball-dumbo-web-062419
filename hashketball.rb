@@ -349,4 +349,41 @@ end
 # puts big_shoe_rebounds
 
 
+####################################
+# Try to redo this lab with .select & .map
+def num_points_scored_select(player_name)
 
+    chosen_player = game_hash[:home][:players].select do |player_data|
+        player_data[:player_name] == player_name
+    end
+    
+    if chosen_player.length == 0
+        chosen_player = game_hash[:away][:players].select do |player_data|
+            player_data[:player_name] == player_name
+        end
+    end
+
+    chosen_player[0][:points]
+
+end
+
+puts num_points_scored_select("Alan Anderson")
+
+# #map TRANSFORMS the collection
+mystery_variable_1 = [1,2,3,4,5].map do |num|
+    num * 2
+end
+# Returns [2,4,6,8,10]
+
+# #select returns a new array that is FILTERED baed on the logic in the block
+mystery_variable_2 = [1,2,3,4,5].select do |num|
+    num.even?
+end
+# => [2,4]
+# mystery_variable_2 = [2,4]
+
+# #find will return the first block that returns true in the iteration
+mystery_variable_3 = [1,2,3,4,5].find do |num|
+    num == 4
+end
+# Returns => 4
